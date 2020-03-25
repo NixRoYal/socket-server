@@ -9,7 +9,7 @@ const server = Server._;
 server.app.use(bodyPparser.urlencoded({ extended: true }));
 server.app.use(bodyPparser.json());
 server.app.use(cors({ origin: true, credentials: true }));// CORS  acceso a cualquier persona a tu serivod
-server.app.use('/api', router);// Rutas de servicios rutas de los servicios REST get,post,put,delete
+server.app.use('/', router);// Rutas de servicios rutas de los servicios REST get,post,put,delete
 
 
 
