@@ -27,11 +27,10 @@ export default class Server {
             // Conectar Cliente
             socket.conectarCliente(cliente);
             socket.configurarUsuario(cliente, this.io);//Configurar Usuario
-
-
-            console.log('Cliente conectado');
+            socket.obtenerUsuarios(cliente, this.io);//Obtener usuarios
             socket.mensaje(cliente, this.io);//Mnesajes
-            socket.desconectar(cliente); // Desconectar
+            socket.desconectar(cliente, this.io); // Desconectar
+            console.log('Cliente conectado');
         });
     }
 
